@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="format-detection" content="telephone=no"/> -->
+  <!-- <meta name="format-detection" content="address=no"/> -->
+
+  <title>Title</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/icons.css">
+
+  <!-- slider -->
+  <link rel="stylesheet" href="slider/owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="slider/owlcarousel/owl.theme.default.min.css">
+
+  <!-- yandex map -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+  <div class="shadow hidden"></div>
+  <div class="container">
+    <button class="color-theme_btn"></button>
+    <div class="js-color-theme hidden">
+      <div class="color-theme">
+        <div class="color-theme__header flex">
+          <h3>Настройки</h3>
+          <button type="button" name="button" class="btn btn_close">&times</button>
+        </div>
+        <h4>Цветовая схема:</h4>
+        <div class="color-theme__item flex">
+          <label class="color-theme__label" title="blue">
+                    <input  class="color-theme__radio" value="blue" name='color-theme' checked  type="radio">
+                    <span></span>
+                </label>
+          <label class="color-theme__label" title="orange">
+                    <input  class="color-theme__radio" value="orange" name='color-theme'   type="radio">
+                    <span></span>
+                </label>
+          <label class="color-theme__label" title="green">
+                    <input  class="color-theme__radio" value="green" name='color-theme'   type="radio">
+                    <span></span>
+                </label>
+          <label class="color-theme__label" title="violet">
+                    <input  class="color-theme__radio" value="violet" name='color-theme'   type="radio">
+                    <span></span>
+                </label>
+          <label class="color-theme__label" title="wine">
+                    <input  class="color-theme__radio" value="wine" name='color-theme'   type="radio">
+                    <span></span>
+                </label>
+          <label class="color-theme__label" title="red">
+                    <input  class="color-theme__radio" value="red" name='color-theme'   type="radio">
+                    <span></span>
+                </label>
+        </div>
+          <h4>Настройки слайдера</h4>
+        <div class="color-theme__item flex">
+
+        </div>
+        <h4>Вариатны иконок</h4>
+        <div class="color-theme__item flex">
+
+        </div>
+        <h4>Настройки блоков</h4>
+        <div class="color-theme__item flex">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--header start-->
+  <header class="header">
+    <div class="container">
+      <div class="site__nav flex">
+        <div class="nav__header">
+          <div class="navbar-toggle">
+            <!-- <span class="sr-only">Toggle navigation</span> -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </div>
+        </div>
+        <div class="logo">FLATROOM</div>
+        <nav class="nav flex">
+          <a href="#benefits">Преимущества</a>
+          <a href="#about">О нас</a>
+          <a href="#work">Наша работа</a>
+          <a href="#services">Услуги</a>
+          <a href="#doc">Документы</a>
+          <a href="#">Контакты</a>
+        </nav>
+        <a href="#" class="phone">+7 (495) 322-11-33</a>
+      </div>
+    </div>
+    <div class="top-slider">
+      <img src="resources/images/business_1.png" alt="" class="bg-xs">
+      <div class="top-slider_wr">
+        <div class="top-slider__slides js-slider-1 owl-carousel">
+          <img src="resources/images/business_1.png" alt="">
+          <img src="resources/images/business_1.png" alt="">
+          <img src="resources/images/business_1.png" alt="">
+        </div>
+      </div>
+      <div class="container">
+        <div class="header__content flex">
+          <h1>Открой франшизу магазина <br>модной одежды</h1>
+          <p>Будь первым!</p>
+          <div class="owl">
+            <div class="owl_nav"></div>
+            <div class="owl_dots js-color  blue flex"></div>
+          </div>
+          <a href="#" class="btn btn_calc js-color blue">Рассчитать стоимость</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--header end-->
+
+  <!-- content start-->
+  <section id="benefits" class="container">
+    <h2 class="section-header">Преимущества</h2>
+    <div class="section-benefits flex">
+      <div class="benefits__item flex">
+        <span class="icon js-color wallet blue"></span>
+        <p>Приемлемая стоимость</p>
+      </div>
+      <div class="benefits__item flex">
+        <span class="icon js-color desktop blue"></span>
+        <p>Онлайн консультация</p>
+      </div>
+      <div class="benefits__item flex">
+        <span class="icon js-color money blue"></span>
+        <p>Оплата в рассрочку</p>
+      </div>
+    </div>
+  </section>
+  <div class="bg-grey">
+    <section id="about" class="container section-about">
+      <h2 class="section-header">О компании <span>FLATROOM</span></h2>
+      <p>С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что реализация намеченных плановых
+        заданий требуют определения и уточнения систем</p>
+    </section>
+  </div>
+  <section id="work" class="container">
+    <h2 class="section-header">Как мы работаем</h2>
+    <div class="section-work flex">
+      <div class="section-work__wr  work_lg">
+        <div class="section-work__item flex">
+          <p class="work_num lg">01</p>
+          <div class="work_text-wr">
+            <p class="work_title">Выполнение отгрузок</p>
+            <p class="work_text">Выполнение плана отгрузок продукции производителя, для поддержание постоянного наличия его продукции на ногу двигается аппарата вверх в размере двух человек пропорционально
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section-work__wr ">
+        <div class="section-work__item">
+          <p class="work_num sm">02</p>
+          <div class="work_text-wr">
+            <p class="work_title">Выполнение отгрузок</p>
+            <p class="work_text">Выполнение плана отгрузок на верху движение воспроизводства отныне производительный поддержание
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section-work__wr ">
+        <div class="section-work__item">
+          <p class="work_num sm">03</p>
+          <div class="work_text-wr">
+            <p class="work_title">Выполнение отгрузок</p>
+            <p class="work_text">Выполнение плана отгрузок на верху движение воспроизводства отныне производительный поддержание
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section-work__wr ">
+        <div class="section-work__item">
+          <p class="work_num sm">04</p>
+          <div class="work_text-wr">
+            <p class="work_title">Выполнение отгрузок</p>
+            <p class="work_text">Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности способствует подготовки и реализации новых предложений. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности в значительной
+              степени в значительной степени в значительной степени
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section-work__wr work_lg">
+        <div class="section-work__item flex work_fix">
+          <p class="work_num lg">05</p>
+          <div class="work_text-wr">
+            <p class="work_title">Выполнение отгрузок</p>
+            <p class="work_text">Выполнение плана отгрузок продукции производителя, для поддержания выхода вовремя тройного аперкота супер сила
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="container services">
+    <h2 class="section-header">Услуги компании FLATROOM</h2>
+    <div class="js-slider-2  owl-carousel js-color blue js-services">
+      <div class="services_slider-block flex">
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+      </div>
+      <div class="services_slider-block flex">
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="js-slider-3  owl-carousel js-color blue js-goods hidden">
+      <div class="services_slider-block flex">
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+      </div>
+      <div class="services_slider-block flex">
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+        <div class="services_slider-item">
+          <img src="resources/images/services.png" alt="">
+          <div class="services_slider-text">
+            <p class="services_slider-header">Консультация специалиста</p>
+            <p>Разговор через skype. Оплата почасовая</p>
+            <p class="services_slider-price">1 499 руб.</p>
+            <a href="" class="btn btn_buy blue  js-color">Купить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section id="doc" class="container">
+    <h2 class="section-header">Документация</h2>
+    <div class="section-doc flex">
+      <div class="section-doc_left">
+        <div class="doc-slider__wr">
+          <div class="doc__slider js-doc__slider   js-color owl-carousel blue">
+            <div class="doc__slider-item">
+              <img src="resources/images/doc.png" alt="Пример документа Ф-45 89-1">
+            </div>
+            <div class="doc__slider-item">
+              <img src="resources/images/doc.png" alt="Another document">
+            </div>
+            <div class="doc__slider-item">
+              <img src="resources/images/doc.png" alt="Пример документа Ф-45 89-2">
+            </div>
+            <div class="doc__slider-item">
+              <img src="resources/images/doc.png" alt="Пример документа Ф-45 89-3">
+            </div>
+            <div class="doc__slider-item">
+              <img src="resources/images/doc.png" alt="Пример документа Ф-45 89-4">
+            </div>
+          </div>
+        </div>
+        <div class="slider_descr">
+          <p class="slider_descr-text">Пример документа Ф-45 89</p>
+          <a href="#" class="doc__all">Смотреть все документы</a>
+        </div>
+      </div>
+      <div class="doc__info">
+        <div class="flex first-line">
+          <p class="doc__title">Информация о доставке</p>
+          <a href="#">Подробнее</a>
+        </div>
+        <p>Доставка осуществляется через Почту России. Срок доставки от 3 дней, в зависимости от города доставки. Более точные сроки мы сообщим при расчёте отправления</p>
+        <ul>
+          <li class="doc__list">Доставка по России - 300₽ </li>
+          <li class="doc__list">Доставка в страны СНГ - 400₽</li>
+          <li class="doc__list">Доставка зарубеж - индивидуально</li>
+        </ul>
+        <p>P.S. К сожалению, сотрудники магазина не могут повлиять на скорость работы Почты России. Искренне надеемся на понимание.</p>
+        <p class="doc__title doc__title2">Информация об оплате</p>
+        <p>Возможна только полная или поэтапная оплата товара:</p>
+        <ol class="odered__list">
+          <li class="doc__list"><span>Оформляете заказ</span></li>
+          <li class="doc__list"><span>Вносите 50% стоимости заказа</span></li>
+          <li class="doc__list"><span>Формируем заказ, отправляем фото посылки, подготовленной к отправке</span></li>
+          <li class="doc__list"><span>Вносите оставшиеся 50% + стоимость доставки</span></li>
+          <li class="doc__list"><span>Отправляем заказ</span></li>
+        </ol>
+        <p>Оплата осуществляется:</p>
+        <ul class="pay__list">
+          <li class="doc__list"><span>&#8381;</span>Переводом на VISA/MasterCard</li>
+          <li class="doc__list"><span>&#8381;</span>Переводом на карту Сбербанка </li>
+          <li class="doc__list"><span>&#8381;</span>Переводом на карту Сбербанка </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="map">
+    <div id="map"></div>
+    <div class="container flex">
+      <div class="form_application">
+        <form class="form flex" action="index.html" method="post">
+          <p class="form__header">Отправить заявку</p>
+          <input class="submit_name" type="text" placeholder="Alex">
+          <input class="submit_tel" type="tel" placeholder="Ваш телефон">
+          <button class="btn btn_submit js-color blue" type="submit" name="button">Отправить заявку</button>
+          <p class="form_footer flex"><span class="icon padlock"></span>Гарантируем конфиденциальность</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- content end-->
+
+  <!--footer start-->
+
+  <footer class="footer">
+    <div class="footer_wr">
+      <div class="container">
+        <div class="site__nav flex">
+          <div class="logo">FLATROOM</div>
+          <nav class="nav flex">
+            <a href="#">Преимущества</a>
+            <a href="#">О нас</a>
+            <a href="#">Наша работа</a>
+            <a href="#">Услуги</a>
+            <a href="#">Документы</a>
+            <a href="#">Контакты</a>
+          </nav>
+          <a href="#" class="phone">+7 (495) 322-11-33</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_dev-wr">
+      <div class="container">
+        <div class="footer_dev flex">
+          <p class="copyrite"><span>FLATROOM (C)</span> Все правав защищены, 2018. <span>Разработка <a href="">ALIOT</a> </span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--footer end-->
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+  <!-- slider -->
+  <script type="text/javascript" src="slider/owlcarousel/owl.carousel.min.js"></script>
+
+  <script src="scripts/script.js"></script>
+
+
+</body>
+
+</html>

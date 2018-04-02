@@ -1,0 +1,28 @@
+$phone-width: 768px;
+$desktop-width: 992px;
+
+@mixin phone {
+  @media (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$phone-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+
+$blue:  #247dec;
+$red: #df3a00;
+$green:  #25a00d;
+$orange:  #bea47f;
+$violet: #770f6e;
+$wine: #ba3660;
