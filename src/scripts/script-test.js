@@ -95,20 +95,20 @@ ymaps.ready(function () {
 //        nav: true,
 //        dots: true,
 //        navContainer: '.owl_nav',
-//        dotsContainer: '.owl_dots',      
+//        dotsContainer: '.owl_dots',
 //  });
-//     
+//
 //     $(window).resize(function() {
 //         var simple = $('.js-slider-1');
-//         var screenWidth = window.innerWidth;        
-//         
+//         var screenWidth = window.innerWidth;
 //
-//     if (screenWidth > 992) {         
+//
+//     if (screenWidth > 992) {
 //            $owl.trigger('refresh.owl.carousel');
 //     }
 //     else simple.owlCarousel('destroy');
 //     });
-// 
+//
 // });
 // $(document).ready(function(){
 //     $('.slider-2').slick({
@@ -143,3 +143,78 @@ ymaps.ready(function () {
 // 		$('body,html').animate({scrollTop: top}, 1500);
 // 	});
 // });
+
+//slider symmetric
+$('input[name="jsSliderTheme"]').click(function(){
+  var valueName = $("input[name='jsSliderTheme']:radio:checked").attr('value');
+
+  var el = $(".jsSliderTheme").removeClass('hidden');
+
+  // var elClassList = el.prop("classList");
+    // console.log('.jsSliderTheme.'+valueName);
+
+    // var el = ('.jsSliderTheme.'+valueName);
+    // console.log('el', el);
+
+    // $('.jsSliderTheme .'+valueName).addClass('active');
+    // $(el).addClass('show');
+
+  el.each(function(){
+
+    if($(this).hasClass(valueName)) {
+      console.log('list',   el.prop("classList"));
+      console.log('valueName', valueName);
+        el.not(this).addClass('hidden');
+    }
+  });
+  //         // $(".owl-carousel[data-type]").addClass('hidden');
+
+});
+
+
+/* Filter not working */
+var owlAnimateFilter = function(even) {
+  $(this)
+  .addClass('__loading')
+  .delay(70 * $(this).parent().index())
+  .queue(function() {
+    $(this).dequeue().removeClass('__loading')
+  })
+}
+var filter_data = $('.red');
+$owl.owlFilter(filter_data, function(_owl) {
+$(_owl).find('.services_slider-block').each(owlAnimateFilter);
+});
+
+
+// function owlRefresh($owl) {
+//   $owl.trigger('destroy.owl.carousel');
+//   $owl.html($owl.find('.owl-stage-outer').html()).removeClass('owl-loaded');
+//   $owl.owlCarousel(owlOptions);
+// }
+
+//create class name
+var el = ('.sliderTheme.' + valueName);
+$(el).addClass('show');
+
+/* Filter not working */
+function filterSlide(){
+  var filterItem = $("input[name='companyType']:radio:checked").attr('value');
+  var hide = false;
+  $('.js-slider-2').trigger('destroy.owl.carousel');
+  $('.js-slider-2').owlCarousel(owlOptions);
+  do {
+    hide = false;
+    $(".js-slider-2 .owl-item > div").each(function(i){
+    var $this = $(this);
+      if($this.data('type') !== filterItem){
+          hide = true;
+          $(".js-slider-2").trigger( 'remove.owl.carousel', i);
+          return false;
+      }
+    });
+  }while (hide);
+  /* remove item empty when clear */
+  ('.js-slider-2').owlRemoveItem(0);
+  ('.js-slider-2').trigger('refresh.owl.carousel').trigger('to.owl.carousel', [0]);
+};
