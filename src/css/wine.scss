@@ -1,5 +1,51 @@
 $wine: #ba3660;
+.bg-about {
+  background-color: #f4ecef;
+}
+.btn {
+  background-color: $wine;
+  border: 1px solid $wine;
+  box-shadow: 0 0 49px 10px rgba(186, 54, 96, .27), 0 3px 0 #75213c;
 
-.btn_submit {
-  background-color: $wine;  
+  &_submit {
+    background-color: $wine;
+  }
+}
+.container .owl-carousel .owl-nav button.owl-prev:before {
+  background: url("../resources/images/left-arrow-wine.png") no-repeat;
+}
+.container  .owl-carousel .owl-nav button.owl-next,
+.container  .owl-carousel .container .owl-carousel .owl-nav button.owl-prev {
+  border: 1px solid $wine;
+}
+
+.container .owl-carousel .owl-nav button.owl-next {
+  background-image: linear-gradient(-120deg, rgb(186,54,96) 0%, rgb(123,34,63) 100%);
+}
+.owl_dots .active{
+  & span {
+    background-color: $wine;
+  }
+
+  & span:after {
+    border: 1px solid $wine;
+  }
+}
+.icon.desktop{
+  background-image: url('../resources/images/sprite-wine.png');
+  background-position: -100px 0px;
+  width: 120px;
+  height: 80px;
+}
+.icon.money {
+  background-image: url('../resources/images/sprite-wine.png');
+  background-position: 0px 0px;
+  width: 100px;
+  height: 102px;
+}
+.icon.wallet {
+  background-image: url('../resources/images/sprite-wine.png');
+  background-position: 0px -102px;
+  width: 83px;
+  height: 83px;
 }

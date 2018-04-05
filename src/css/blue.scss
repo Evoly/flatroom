@@ -1,6 +1,59 @@
 $blue:  #247dec;
 
+.bg-about {
+  background-color: #ecf0f5;
+}
 .btn_submit {
   background-color: $blue;
   box-shadow: 0 0 49px 10px rgba(36, 125, 236, .27);
+}
+
+.btn {
+  background-color: $blue;
+  border: 1px solid $blue;
+  box-shadow: 0 0 49px 10px rgba(36, 125, 236, .27), 0 3px 0 #0c4d9e;
+}
+.container .owl-carousel .owl-nav button.owl-next,
+.container .owl-carousel .owl-nav button.owl-prev {
+  border: 1px solid $blue;
+}
+.container .owl-carousel .owl-nav button.owl-next {
+  background-image: linear-gradient(116deg, rgb(53,80,113) 0%, rgb(43,91,155) 100%);
+}
+.owl-carousel .owl-nav button.owl-prev:before {
+  background: url("../resources/images/sprite-blue.png") no-repeat;
+  background-position: -120px -83px;
+}
+.owl_dots .active{
+  & span {
+    background-color: $blue;
+  }
+
+  & span:after {
+    border: 1px solid $blue;
+  }
+}
+.icon.desktop {
+  background-image: url('../resources/images/sprite-blue.png');
+  background-position: 0px 0px;
+  width: 120px;
+  height: 80px;
+}
+.icon-left-arrow {
+  background-image: url('../resources/images/sprite-blue.png');
+  background-position: -120px -83px;
+  width: 19px;
+  height: 14px;
+}
+.icon.money {
+  background-image: url('../resources/images/sprite-blue.png');
+  background-position: 0px -80px;
+  width: 94px;
+  height: 92px;
+}
+.icon.wallet {
+  background-image: url('../resources/images/sprite-blue.png');
+  background-position: -120px 0px;
+  width: 83px;
+  height: 83px;
 }

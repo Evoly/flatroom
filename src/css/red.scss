@@ -1,0 +1,55 @@
+$red: #df3a00;
+
+
+.bg-about {
+  background-color: #f9f3f1;
+}
+.btn {
+
+  background-color: $red;
+  border: 1px solid $red;
+  box-shadow: 0 3px 0 #7c2000, 0 0 49px 10px rgba(223, 58, 0, .3);
+
+  &_submit {
+    background-color: $red;
+  }
+}
+
+.container .owl-carousel .owl-nav button.owl-prev:before {
+  background: url("../resources/images/icons/left-arrow-red.png") no-repeat;
+}
+.container .owl-carousel .owl-nav button.owl-next,
+.container .owl-carousel .owl-nav button.owl-prev {
+  border: 1px solid $red;
+}
+
+.container .owl-carousel .owl-nav button.owl-next {
+  background-image: linear-gradient(-120deg, rgb(223,58,0) 0%, rgb(157,41,0) 100%);
+}
+.owl_dots .active{
+  & span {
+    background-color: $red;
+  }
+
+  & span:after {
+    border: 1px solid $red;
+  }
+}
+.icon.desktop {
+  background-image: url('../resources/images/sprite-red.png');
+  background-position: 0px 0px;
+  width: 120px;
+  height: 80px;
+}
+.icon.money {
+  background-image: url('../resources/images/sprite-red.png');
+  background-position: 0px -80px;
+  width: 93px;
+  height: 98px;
+}
+.icon.wallet {
+  background-image: url('../resources/images/sprite-red.png');
+  background-position: -120px 0px;
+  width: 83px;
+  height: 83px;
+}

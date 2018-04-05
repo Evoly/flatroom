@@ -23,31 +23,21 @@ gulp.task('sass', function(){
         .pipe(gulp.dest("dist/css"))
 });
 
-gulp.task('sprites', function () {
-  var spriteData = gulp.src('src/resources/images/icons/*.png')
-    .pipe(spritesmith({
-      imgName: 'sprite.png',
-      cssName: 'sprite.css',
-      imgPath: 'dist/resources/images/sprite.png',
-      cssOpts: {
-        cssSelector: function (sprite) {
-          const spriteName = sprite.name;
-          if (~spriteName.indexOf("arrow")) {
-            return '.' + sprite.name;
-          } else {            
-            return '.' + spriteName.replace('-', '.');
-          }
-        }
-      }
-    }));
-
-  var imgStream = spriteData.img
-    .pipe(gulp.dest('dist/resources/images'));
-  var cssStream = spriteData.css
-    .pipe(gulp.dest('dist/css'));
-
-  return (imgStream, cssStream);
-});
+// gulp.task('sprites', function () {
+//   var spriteData = gulp.src('src/resources/images/icons-violet/*.png')
+//     .pipe(spritesmith({
+//       imgName: 'sprite-violet.png',
+//       cssName: 'sprite-violet.css',
+//       imgPath: 'dist/resources/images/sprite-violet.png'
+//     }));
+//
+//   var imgStream = spriteData.img
+//     .pipe(gulp.dest('dist/resources/images'));
+//   var cssStream = spriteData.css
+//     .pipe(gulp.dest('dist/css'));
+//
+//   return (imgStream, cssStream);
+// });
 
 
 gulp.task('clean', function() {
@@ -74,7 +64,7 @@ gulp.task('scripts', function() {
 
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('sass','page','resources','scripts', 'sprites'))
+  gulp.parallel('sass','page','resources','scripts'))
 );
 
 gulp.task('watch', function() {

@@ -30,13 +30,6 @@ $(document).ready(function() {
   $('.js-slider-4').owlCarousel(owlOptions);
   $('.js-slider-5').owlCarousel(owlOptions);
 
-  var symetircSlider = $('.js-slider-2').owlCarousel({
-
-  });
-  // $('input[name="companyType"]').click(function(e) {
-  //
-  // })
-
   $('.js-doc__slider').owlCarousel({
     items: 1,
     margin: 5,
@@ -56,24 +49,21 @@ $(document).ready(function() {
   //   //choose color
 
   $('.js-color-theme').click(function() {
-
     var set = ['orange', 'blue', 'red', 'violet', 'green', 'wine'];
-    var el = $('.js-color')
-    var elClass = el.prop("classList");
-
-
-    for (var i = 0; i < set.length; i++) {
-      for (var k = 0; k < elClass.length; k++) {
-        if (set[i] === elClass[k]) {
-          el.removeClass(elClass[k]);
-        }
+    var color = $("input:radio:checked").attr('value');
+    $('.js-color').addClass(color);
+    //chsnge css link
+    var substr = '';
+    var newLink = $('link[data-theme]').attr('href');
+    for (var i = 0; i < set.length; i++){
+      if (~newLink.indexOf(set[i])){
+        substr = set[i];
       }
     }
 
-    var color = $("input:radio:checked").attr('value');
-    $('.js-color').addClass(color);
-
-
+    $('link[data-theme]').attr('href',
+      function() { return this.href.replace(substr, color);}
+    );
   });
 
   $('.color-theme_btn').click(function(e) {
@@ -85,7 +75,28 @@ $(document).ready(function() {
     e.preventDefault();
     $('.js-color-theme').toggleClass('hidden');
     $('.shadow').toggleClass('hidden');
-  })
+  });
+  $('.btn_submit').click(function(e) {
+    e.preventDefault();
+    $('.js-color-theme').toggleClass('hidden');
+    $('.shadow').toggleClass('hidden');
+  });
+  $('.btn_buy').click(function(e) {
+    e.preventDefault();
+    $('.form__order').toggleClass('hidden');
+    $('.shadow').toggleClass('hidden');
+  });
+  $('.btn_order').click(function(e) {
+    e.preventDefault();
+    $('.form__order').toggleClass('hidden');
+    $('.shadow').toggleClass('hidden');
+  });
+  $('.btn_close-order').click(function(e) {
+    e.preventDefault();
+    $('.form__order').toggleClass('hidden');
+    $('.shadow').toggleClass('hidden');
+  });
+
 
   //data-set
   $('input[name="iconsSet"]').click(function(e) {
@@ -138,8 +149,18 @@ $(document).ready(function() {
       scrollTop: top
     }, 1500);
   });
+
+  $(".to_submit").on("click", function(event) {
+    event.preventDefault();
+    var id = $('#submit'),
+      top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+
 });
-//
+
 //
 // // yandex map
 //

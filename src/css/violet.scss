@@ -1,0 +1,62 @@
+$violet: #770f6e;
+
+.bg-about {
+  background-color: #f2edf3;
+}
+.btn {
+  background-image: linear-gradient(-120deg, rgb(188,13,151) 0%, rgb(136,23,152) 100%);
+  border: 1px solid $violet;
+  box-shadow: 0 0 49px 10px rgba(141, 26, 162, .2),
+    0 3px 0 #581165;
+
+  &_submit {
+    background-color: $violet;
+  }
+}
+
+.container .owl-carousel .owl-nav button.owl-prev:before {
+  background: url("../resources/images/sprite-violet.png")no-repeat;
+  background-position: -120px -83px;
+}
+.container .owl-carousel .owl-nav button.owl-next,
+.container .owl-carousel .owl-nav button.owl-prev {
+  border: 1px solid #770f6e;
+}
+
+.container .owl-carousel .owl-nav button.owl-next {
+  background-image: linear-gradient(-120deg, rgb(141,14,114) 0%, rgb(94,17,105) 100%);
+}
+.owl_dots .active{
+  & span {
+    background-color: $violet;
+  }
+
+  & span:after {
+    border: 1px solid $violet;
+  }
+}
+
+.icon.desktop {
+  background-image: url('../resources/images/sprite-violet.png');
+  background-position: 0px 0px;
+  width: 120px;
+  height: 80px;
+}
+.icon-left-arrow {
+  background-image: url('../resources/images/sprite-violet.png');
+  background-position: -120px -83px;
+  width: 19px;
+  height: 14px;
+}
+.icon.money {
+  background-image: url('../resources/images/sprite-violet.png');
+  background-position: 0px -80px;
+  width: 91px;
+  height: 94px;
+}
+.icon.wallet {
+  background-image: url('../resources/images/sprite-violet.png');
+  background-position: -120px 0px;
+  width: 83px;
+  height: 83px;
+}
