@@ -148,6 +148,11 @@ html {
   font-size: 1.5em;
   font-family: "FiraSans Medium";
   line-height: 1.417;
+  &:hover {
+    transition: all .4s ease-in-out;
+    opacity: .7;
+  }
+
 }
 
 .header {
@@ -292,12 +297,12 @@ html {
   }
 
   .owl-next {
-    background: url("../resources/images/icons-sc2f39432e4.png") 0 -1075px no-repeat;
+    background: url("../resources/images/icons/slider-next.png") no-repeat;
     right: 0;
   }
 
   .owl-prev {
-    background: url("../resources/images/icons-sc2f39432e4.png") 0 -1100px no-repeat;
+    background: url("../resources/images/icons/slider-rev.png") no-repeat;
     left: 0;
   }
 
@@ -731,6 +736,11 @@ html {
   a {
     color: #0099ff;
     font-size: 0.875em;
+
+    &:hover {
+      transition: all .4s ease-in-out;
+      opacity: .7;
+    }
   }
 }
 
@@ -756,6 +766,11 @@ html {
         font-size: 1.143em;
         color: #0099ff;
         border-bottom: 1px solid rgba(0, 153, 255, .2);
+
+        &:hover {
+          transition: all .4s ease-in-out;
+          opacity: .7;
+        }
       }
     }
 
@@ -919,6 +934,7 @@ html {
         box-shadow: 0 0;
         background-image: none;
         outline: none;
+        border-radius: 0;
 
       &:hover {
         opacity: 1;
@@ -1071,194 +1087,10 @@ html {
 .icon {
   display: block;
 }
-
-.icon.budget.orange {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 0 no-repeat;
-  width: 89px;
-  height: 89px;
-}
-
-.icon.desktop.blue {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -89px no-repeat;
-  width: 120px;
-  height: 80px;
-}
-
-.icon.desktop.green {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -169px no-repeat;
-  width: 120px;
-  height: 80px;
-}
-
-.icon.desktop.violet {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -249px no-repeat;
-  width: 120px;
-  height: 80px;
-}
-
-.icon.desktop.orange {
-  background: url("../resources/images/desktop-orange.png") no-repeat;
-  width: 120px;
-  height: 80px;
-}
-
-.icon.desktop.wine {
-  background: url("../resources/images/desktop-wine.png") no-repeat;
-  width: 120px;
-  height: 80px;
-}
-
-.icon.desktop.red {
-  background: url("../resources/images/desktop-red.png") no-repeat;
-  width: 120px;
-  height: 80px;
-}
-
-.icon.employee.orange {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -329px no-repeat;
-  width: 62px;
-  height: 90px;
-}
-
-.icon.left-arrow-blue {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -419px no-repeat;
-  width: 19px;
-  height: 14px;
-}
-
-.icon.left-arrow-green {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -433px no-repeat;
-  width: 19px;
-  height: 14px;
-}
-
-.icon.left-arrow-orange {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -447px no-repeat;
-  width: 19px;
-  height: 14px;
-}
-
-.icon.left-arrow-violet {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -461px no-repeat;
-  width: 19px;
-  height: 14px;
-}
-
-.icon.locked-orange {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -475px no-repeat;
-  width: 62px;
-  height: 76px;
-}
-
-.icon.money.blue {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -551px no-repeat;
-  width: 94px;
-  height: 92px;
-}
-
-.icon.money.green {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -643px no-repeat;
-  width: 93px;
-  height: 97px;
-}
-
-.icon.money.violet {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -740px no-repeat;
-  width: 91px;
-  height: 94px;
-}
-
-.icon.money.red {
-  background: url("../resources/images/money-red.png") 0 -740px no-repeat;
-  width: 91px;
-  height: 94px;
-}
-/*.icon.money {
-  background: url('../resources/images/icons-sc2f39432e4.png') 0 -834px no-repeat;
-  width: 86px;
-  height: 86px; }*/
 .icon.padlock {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -920px no-repeat;
+  background: url("../resources/images/icons/padlock.png") no-repeat;
   width: 13px;
   height: 19px;
-}
-
-.icon.right-arrow {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -939px no-repeat;
-  width: 19px;
-  height: 14px;
-}
-
-.icon.money.orange {
-  background: url("../resources/images/money-orange.png") no-repeat;
-  width: 125px;
-  height: 122px;
-}
-
-.icon.money.wine {
-  background: url("../resources/images/money-wine.png") no-repeat;
-  width: 125px;
-  height: 122px;
-}
-
-.icon.money.red {
-  background: url("../resources/images/money-red.png") no-repeat;
-  width: 125px;
-  height: 122px;
-}
-
-.icon.slider-next {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -1075px no-repeat;
-  width: 15px;
-  height: 25px;
-}
-
-.icon.slider-rev {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -1100px no-repeat;
-  width: 15px;
-  height: 25px;
-}
-
-.icon.tool.orange {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -1125px no-repeat;
-  width: 84px;
-  height: 87px;
-}
-
-.icon.wallet.blue {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -1212px no-repeat;
-  width: 83px;
-  height: 83px;
-}
-
-.icon.wallet.green {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -1295px no-repeat;
-  width: 83px;
-  height: 83px;
-}
-
-.icon.wallet.red {
-  background: url("../resources/images/wallet-red.png") no-repeat;
-  width: 83px;
-  height: 83px;
-}
-
-.icon.wallet.wine {
-  background: url("../resources/images/wallet-wine.png") no-repeat;
-  width: 83px;
-  height: 83px;
-}
-
-.icon.wallet.orange {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -1378px no-repeat;
-  width: 84px;
-  height: 87px;
-}
-
-.icon.wallet.violet {
-  background: url("../resources/images/icons-sc2f39432e4.png") 0 -1465px no-repeat;
-  width: 83px;
-  height: 83px;
 }
 //radio
 .color-theme {

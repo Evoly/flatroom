@@ -12,10 +12,10 @@ $wine: #ba3660;
   }
 }
 .container .owl-carousel .owl-nav button.owl-prev:before {
-  background: url("../resources/images/left-arrow-wine.png") no-repeat;
+  background: url("../resources/images/icons/left-arrow-wine.png") no-repeat;
 }
 .container  .owl-carousel .owl-nav button.owl-next,
-.container  .owl-carousel .container .owl-carousel .owl-nav button.owl-prev {
+.container .owl-carousel .owl-nav button.owl-prev {
   border: 1px solid $wine;
 }
 

@@ -37,7 +37,7 @@ $(document).ready(function() {
     nav: true,
     dots: true,
     loop: true,
-    onInitialized: findHeader, //When the plugin has initialized.
+    onInitialized: findHeader,
     onTranslated: findHeader
   });
 
@@ -70,6 +70,14 @@ $(document).ready(function() {
     e.preventDefault();
     $('.js-color-theme').toggleClass('hidden');
     $('.shadow').toggleClass('hidden');
+
+    $(document).mouseup(function (e) {
+      var container = $('.js-color-theme');
+      if (e.target!=container[0]&&container.has(e.target).length===0){
+          container.addClass('hidden');
+          $('.shadow').addClass('hidden');        
+        }
+    });
   });
   $('.btn_close').click(function(e) {
     e.preventDefault();
@@ -98,6 +106,21 @@ $(document).ready(function() {
   });
 
 
+  $(document).keydown(function(e) {
+    // ESCAPE key pressed
+    if (e.keyCode == 27) {
+      if(!$('.form__order').hasClass('hidden')) {
+        $('.form__order').toggleClass('hidden');
+      }
+      if(!$('.js-color-theme').hasClass('hidden')) {
+        $('.js-color-theme').toggleClass('hidden');
+      }
+      if(!$('.shadow').hasClass('hidden')) {
+        $('.shadow').toggleClass('hidden');
+      }
+    }
+});
+
   //data-set
   $('input[name="iconsSet"]').click(function(e) {
 
@@ -117,9 +140,7 @@ $(document).ready(function() {
 
     $('[data-type-company]').each(function() {
       var el = $(this);
-      console.log('el', el);
       if (el.data('type-company') !== valueName) {
-        console.log(el.data('type-company'));
         $(this).addClass('hidden');
       }
     });
@@ -137,8 +158,6 @@ $(document).ready(function() {
         $(this).addClass('hidden');
       }
     });
-
-
   });
 
   $(".nav a").on("click", function(event) {
