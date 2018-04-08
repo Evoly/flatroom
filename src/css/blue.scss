@@ -33,27 +33,6 @@ $blue:  #247dec;
     border: 1px solid $blue;
   }
 }
-.icon.desktop {
-  background-image: url('../resources/images/sprite-blue.png');
-  background-position: 0px 0px;
-  width: 120px;
-  height: 80px;
-}
-.icon-left-arrow {
-  background-image: url('../resources/images/sprite-blue.png');
-  background-position: -120px -83px;
-  width: 19px;
-  height: 14px;
-}
-.icon.money {
-  background-image: url('../resources/images/sprite-blue.png');
-  background-position: 0px -80px;
-  width: 94px;
-  height: 92px;
-}
-.icon.wallet {
-  background-image: url('../resources/images/sprite-blue.png');
-  background-position: -120px 0px;
-  width: 83px;
-  height: 83px;
+.icon_svg {
+  fill: $blue;
 }

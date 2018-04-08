@@ -1,0 +1,31 @@
+.bg-about {
+  background-color: #f2edf3; }
+
+.btn {
+  background-image: linear-gradient(-120deg, #bc0d97 0%, #881798 100%);
+  border: 1px solid #770f6e;
+  box-shadow: 0 0 49px 10px rgba(141, 26, 162, 0.2), 0 3px 0 #581165; }
+  .btn_submit {
+    background-color: #770f6e; }
+
+.container .owl-carousel .owl-nav button.owl-prev:before {
+  background: url("../resources/images/sprite-violet.png") no-repeat;
+  background-position: -120px -83px; }
+
+.container .owl-carousel .owl-nav button.owl-next,
+.container .owl-carousel .owl-nav button.owl-prev {
+  border: 1px solid #770f6e; }
+
+.container .owl-carousel .owl-nav button.owl-next {
+  background-image: linear-gradient(-120deg, #8d0e72 0%, #5e1169 100%); }
+
+.owl_dots .active span {
+  background-color: #770f6e; }
+
+.owl_dots .active span:after {
+  border: 1px solid #770f6e; }
+
+.icon_svg {
+  fill: #770f6e; }
+
+/*# sourceMappingURL=violet.css.map */

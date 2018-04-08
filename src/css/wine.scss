@@ -31,21 +31,6 @@ $wine: #ba3660;
     border: 1px solid $wine;
   }
 }
-.icon.desktop{
-  background-image: url('../resources/images/sprite-wine.png');
-  background-position: -100px 0px;
-  width: 120px;
-  height: 80px;
-}
-.icon.money {
-  background-image: url('../resources/images/sprite-wine.png');
-  background-position: 0px 0px;
-  width: 100px;
-  height: 102px;
-}
-.icon.wallet {
-  background-image: url('../resources/images/sprite-wine.png');
-  background-position: 0px -102px;
-  width: 83px;
-  height: 83px;
+.icon_svg {
+  fill: $wine;
 }

@@ -1,0 +1,30 @@
+.bg-about {
+  background-color: #f9f3f1; }
+
+.btn {
+  background-color: #df3a00;
+  border: 1px solid #df3a00;
+  box-shadow: 0 3px 0 #7c2000, 0 0 49px 10px rgba(223, 58, 0, 0.3); }
+  .btn_submit {
+    background-color: #df3a00; }
+
+.container .owl-carousel .owl-nav button.owl-prev:before {
+  background: url("../resources/images/icons/left-arrow-red.png") no-repeat; }
+
+.container .owl-carousel .owl-nav button.owl-next,
+.container .owl-carousel .owl-nav button.owl-prev {
+  border: 1px solid #df3a00; }
+
+.container .owl-carousel .owl-nav button.owl-next {
+  background-image: linear-gradient(-120deg, #df3a00 0%, #9d2900 100%); }
+
+.owl_dots .active span {
+  background-color: #df3a00; }
+
+.owl_dots .active span:after {
+  border: 1px solid #df3a00; }
+
+.icon_svg {
+  fill: #df3a00; }
+
+/*# sourceMappingURL=red.css.map */

@@ -35,27 +35,6 @@ $green:  #25a00d;
     border: 1px solid $green;
   }
 }
-.icon.desktop {
-  background-image: url('../resources/images/sprite-green.png');
-  background-position: 0px 0px;
-  width: 120px;
-  height: 80px;
-}
-.icon.left-arrow {
-  background-image: url('../resources/images/sprite-green.png');
-  background-position: -120px -83px;
-  width: 19px;
-  height: 14px;
-}
-.icon.money {
-  background-image: url('../resources/images/sprite-green.png');
-  background-position: 0px -80px;
-  width: 93px;
-  height: 97px;
-}
-.icon.wallet {
-  background-image: url('../resources/images/sprite-green.png');
-  background-position: -120px 0px;
-  width: 83px;
-  height: 83px;
+.icon_svg {
+  fill: $green;
 }

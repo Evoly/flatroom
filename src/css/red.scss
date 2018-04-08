@@ -35,21 +35,6 @@ $red: #df3a00;
     border: 1px solid $red;
   }
 }
-.icon.desktop {
-  background-image: url('../resources/images/sprite-red.png');
-  background-position: 0px 0px;
-  width: 120px;
-  height: 80px;
-}
-.icon.money {
-  background-image: url('../resources/images/sprite-red.png');
-  background-position: 0px -80px;
-  width: 93px;
-  height: 98px;
-}
-.icon.wallet {
-  background-image: url('../resources/images/sprite-red.png');
-  background-position: -120px 0px;
-  width: 83px;
-  height: 83px;
+.icon_svg {
+  fill: $red;
 }

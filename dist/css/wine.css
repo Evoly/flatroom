@@ -1,0 +1,30 @@
+.bg-about {
+  background-color: #f4ecef; }
+
+.btn {
+  background-color: #ba3660;
+  border: 1px solid #ba3660;
+  box-shadow: 0 0 49px 10px rgba(186, 54, 96, 0.27), 0 3px 0 #75213c; }
+  .btn_submit {
+    background-color: #ba3660; }
+
+.container .owl-carousel .owl-nav button.owl-prev:before {
+  background: url("../resources/images/icons/left-arrow-wine.png") no-repeat; }
+
+.container .owl-carousel .owl-nav button.owl-next,
+.container .owl-carousel .owl-nav button.owl-prev {
+  border: 1px solid #ba3660; }
+
+.container .owl-carousel .owl-nav button.owl-next {
+  background-image: linear-gradient(-120deg, #ba3660 0%, #7b223f 100%); }
+
+.owl_dots .active span {
+  background-color: #ba3660; }
+
+.owl_dots .active span:after {
+  border: 1px solid #ba3660; }
+
+.icon_svg {
+  fill: #ba3660; }
+
+/*# sourceMappingURL=wine.css.map */
