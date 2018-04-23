@@ -14,26 +14,23 @@ $red: #df3a00;
     background-color: $red;
   }
 }
-
-.container .owl-carousel .owl-nav button.owl-prev:before {
-  background: url("../resources/images/icons/left-arrow-red.png") no-repeat;
-}
-.container .owl-carousel .owl-nav button.owl-next,
-.container .owl-carousel .owl-nav button.owl-prev {
+.services .slider-next,
+.services .slider-prev,
+.section-doc .slider-next,
+.section-doc .slider-prev {
   border: 1px solid $red;
 }
-
-.container .owl-carousel .owl-nav button.owl-next {
+.slider-next {
   background-image: linear-gradient(-120deg, rgb(223,58,0) 0%, rgb(157,41,0) 100%);
 }
-.owl_dots .active{
-  & span {
-    background-color: $red;
-  }
-
-  & span:after {
-    border: 1px solid $red;
-  }
+.slider-prev:before {
+  background: url("../resources/images/icons/left-arrow-red.png") no-repeat;
+}
+.top-slider .slick-dots li.slick-active button::before{
+  background-color: $red;
+}
+.top-slider .slick-dots li.slick-active button::after {
+  border-color: $red;
 }
 .icon_svg {
   fill: $red;

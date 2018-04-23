@@ -11,25 +11,23 @@ $wine: #ba3660;
     background-color: $wine;
   }
 }
-.container .owl-carousel .owl-nav button.owl-prev:before {
-  background: url("../resources/images/icons/left-arrow-wine.png") no-repeat;
-}
-.container  .owl-carousel .owl-nav button.owl-next,
-.container .owl-carousel .owl-nav button.owl-prev {
+.services .slider-next,
+.services .slider-prev,
+.section-doc .slider-next,
+.section-doc .slider-prev {
   border: 1px solid $wine;
 }
-
-.container .owl-carousel .owl-nav button.owl-next {
+.slider-next {
   background-image: linear-gradient(-120deg, rgb(186,54,96) 0%, rgb(123,34,63) 100%);
 }
-.owl_dots .active{
-  & span {
-    background-color: $wine;
-  }
-
-  & span:after {
-    border: 1px solid $wine;
-  }
+.slider-prev:before {
+  background: url("../resources/images/icons/left-arrow-wine.png") no-repeat;
+}
+.top-slider .slick-dots li.slick-active button::before{
+  background-color: $wine;
+}
+.top-slider .slick-dots li.slick-active button::after {
+  border-color: $wine;
 }
 .icon_svg {
   fill: $wine;

@@ -4,14 +4,14 @@
 const gulp = require ('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const rigger = require('gulp-rigger');
+//const rigger = require('gulp-rigger');
 const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
 const newer = require('gulp-newer');
 const browserSync = require('browser-sync');
-const spritesmith = require('gulp.spritesmith');
-const rename = require("gulp-rename");
-const merge = require('merge-stream');
+//const spritesmith = require('gulp.spritesmith');
+//const rename = require("gulp-rename");
+//const merge = require('merge-stream');
 
 
 gulp.task('sass', function(){

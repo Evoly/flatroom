@@ -13,26 +13,24 @@ $orange:  #f7a32c;
     background-color: $orange;
   }
 }
-.container .owl-carousel .owl-nav button.owl-prev:before {
+.services .slider-next,
+.services .slider-prev,
+.section-doc .slider-next,
+.section-doc .slider-prev {
+  border: 1px solid $orange;
+}
+.slider-next {
+  background-image: linear-gradient(116deg, rgb(135,115,87) 0%, rgb(205,177,137) 100%);
+}
+.slider-prev:before {
   background: url("../resources/images/sprite-orange.png") no-repeat;
   background-position: -433px -228px;
 }
-.container .owl-carousel .owl-nav button.owl-next,
-.container .owl-carousel .owl-nav button.owl-prev {
-  border: 1px solid #b5976b;
+.top-slider .slick-dots li.slick-active button::before{
+  background-color: $orange;
 }
-
-.container .owl-carousel .owl-nav button.owl-next {
-  background-image: linear-gradient(116deg, rgb(135,115,87) 0%, rgb(205,177,137) 100%);
-}
-.owl_dots .active{
-  & span {
-    background-color: $orange;
-  }
-
-  & span:after {
-    border: 1px solid $orange;
-  }
+.top-slider .slick-dots li.slick-active button::after {
+  border-color: $orange;
 }
 .icon_svg {
   fill: $orange;

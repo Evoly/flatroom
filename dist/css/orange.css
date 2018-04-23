@@ -4,27 +4,30 @@
 .btn {
   background-color: #f7a32c;
   border: 1px solid #f7a32c;
-  box-shadow: 0 0 49px 10px rgba(247, 163, 44, 0.27), 0 3px 0 #8e5e1a;
+  -webkit-box-shadow: 0 0 49px 10px rgba(247, 163, 44, 0.27), 0 3px 0 #8e5e1a;
+          box-shadow: 0 0 49px 10px rgba(247, 163, 44, 0.27), 0 3px 0 #8e5e1a;
   color: #000; }
   .btn_submit {
     background-color: #f7a32c; }
 
-.container .owl-carousel .owl-nav button.owl-prev:before {
+.services .slider-next,
+.services .slider-prev,
+.section-doc .slider-next,
+.section-doc .slider-prev {
+  border: 1px solid #f7a32c; }
+
+.slider-next {
+  background-image: linear-gradient(116deg, #877357 0%, #cdb189 100%); }
+
+.slider-prev:before {
   background: url("../resources/images/sprite-orange.png") no-repeat;
   background-position: -433px -228px; }
 
-.container .owl-carousel .owl-nav button.owl-next,
-.container .owl-carousel .owl-nav button.owl-prev {
-  border: 1px solid #b5976b; }
-
-.container .owl-carousel .owl-nav button.owl-next {
-  background-image: linear-gradient(116deg, #877357 0%, #cdb189 100%); }
-
-.owl_dots .active span {
+.top-slider .slick-dots li.slick-active button::before {
   background-color: #f7a32c; }
 
-.owl_dots .active span:after {
-  border: 1px solid #f7a32c; }
+.top-slider .slick-dots li.slick-active button::after {
+  border-color: #f7a32c; }
 
 .icon_svg {
   fill: #f7a32c; }

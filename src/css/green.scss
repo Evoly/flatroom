@@ -14,27 +14,26 @@ $green:  #25a00d;
   }
 }
 
-.container .owl-carousel .owl-nav button.owl-next,
-.container .owl-carousel .owl-nav button.owl-prev {
+.services .slider-next,
+.services .slider-prev,
+.section-doc .slider-next,
+.section-doc .slider-prev {
   border: 1px solid $green;
 }
-
-.container .owl-carousel .owl-nav button.owl-next {
+.slider-next {
   background-image: linear-gradient(116deg, rgb(17,87,11) 0%, rgb(22,120,14) 100%);
 }
-.container .owl-carousel .owl-nav button.owl-prev:before {
+.slider-prev:before {
   background: url("../resources/images/sprite-green.png") no-repeat;
-  background-position: -120px -83px;
+background-position: -120px -83px;
 }
-.owl_dots .active{
-  & span {
-    background-color: $green;
-  }
+.top-slider .slick-dots li.slick-active button::before{
+  background-color: $green;
+}
+.top-slider .slick-dots li.slick-active button::after {
+  border-color: $green;
+}
 
-  & span:after {
-    border: 1px solid $green;
-  }
-}
 .icon_svg {
   fill: $green;
 }

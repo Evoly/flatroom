@@ -4,26 +4,29 @@
 .btn {
   background-color: #25a00d;
   border: 1px solid #25a00d;
-  box-shadow: 0 0 49px 10px rgba(15, 177, 34, 0.27), 0 3px 0 #186708; }
+  -webkit-box-shadow: 0 0 49px 10px rgba(15, 177, 34, 0.27), 0 3px 0 #186708;
+          box-shadow: 0 0 49px 10px rgba(15, 177, 34, 0.27), 0 3px 0 #186708; }
   .btn_submit {
     background-color: #25a00d; }
 
-.container .owl-carousel .owl-nav button.owl-next,
-.container .owl-carousel .owl-nav button.owl-prev {
+.services .slider-next,
+.services .slider-prev,
+.section-doc .slider-next,
+.section-doc .slider-prev {
   border: 1px solid #25a00d; }
 
-.container .owl-carousel .owl-nav button.owl-next {
+.slider-next {
   background-image: linear-gradient(116deg, #11570b 0%, #16780e 100%); }
 
-.container .owl-carousel .owl-nav button.owl-prev:before {
+.slider-prev:before {
   background: url("../resources/images/sprite-green.png") no-repeat;
   background-position: -120px -83px; }
 
-.owl_dots .active span {
+.top-slider .slick-dots li.slick-active button::before {
   background-color: #25a00d; }
 
-.owl_dots .active span:after {
-  border: 1px solid #25a00d; }
+.top-slider .slick-dots li.slick-active button::after {
+  border-color: #25a00d; }
 
 .icon_svg {
   fill: #25a00d; }
