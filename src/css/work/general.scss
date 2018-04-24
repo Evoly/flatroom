@@ -40,7 +40,14 @@ html {
   width: 100%;
   color: #fff;
 }
-
+.header {
+  @include phone {
+    background-image: linear-gradient(45deg, #869791 0%, #d5d5d5 99%, #d6d6d6 100%);
+  };
+  @include tablet {
+    background-image: linear-gradient(45deg, #869791 0%, #d5d5d5 99%, #d6d6d6 100%);
+  };
+}
 .nav {
   flex-direction: row;
   flex-wrap: nowrap;
@@ -88,7 +95,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: #271c18;
+    background-image: linear-gradient(45deg, #869791 0%, #d5d5d5 99%, #d6d6d6 100%);
     min-height: 200px;
     width: 100%;
     left: 0;
@@ -102,7 +109,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: #271c18;
+    background-image: linear-gradient(45deg, #869791 0%, #d5d5d5 99%, #d6d6d6 100%);
     min-height: 200px;
     width: 100%;
     left: 0;
@@ -117,6 +124,12 @@ html {
   width: 25px;
   height: 20px;
   cursor: pointer;
+
+  &:hover {
+    opacity: .7;
+    transition: all 0.4s ease-in-out;
+
+  }
 
   span {
     display: block;
@@ -145,6 +158,12 @@ html {
   font-size: 2em;
   font-family: "Bebas Neue";
 }
+.header .logo {
+  @include phone_xs {
+    width: 100%;
+    text-align: right;
+  }
+}
 
 .phone {
   font-size: 1.5em;
@@ -154,6 +173,15 @@ html {
   &:hover {
     transition: all 0.4s ease-in-out;
     opacity: 0.7;
+  }
+  @include tablet {
+    order: 2;
+  }
+  @include phone {
+    order: 3;
+  }
+  @include phone_xs {
+    font-size: 1.2em;
   }
 }
 
@@ -178,6 +206,11 @@ html {
     @include phone {
       height: 70px;
     }
+    @include phone_xs {
+      top:15px;
+      flex-flow: row wrap;
+    }
+
   }
 
   &__content {
@@ -190,12 +223,18 @@ html {
     z-index: 2;
     color: #fff;
     @include tablet {
-      padding-left: 20px;
+      position: static;
+      padding-top: 100px;
+      padding-bottom: 30px;
+      transform: none;
     }
     @include phone {
+      position: static;
+      transform: none;
       width: 100%;
-      top: 50%;
-      left: 55%;
+      padding-top: 80px;
+      padding-bottom: 30px;
+      transform: none;
       padding-left: 20px;
     }
   }
@@ -472,6 +511,11 @@ html {
   &_submit {
     width: 300px;
     box-shadow: 0 0 49px 10px rgba(36, 125, 236, .27);
+
+    @include phone_xs {
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 
   &_buy {
@@ -511,6 +555,10 @@ html {
   span {
     border-bottom: 3px solid #dddad6;
   }
+  @include phone {
+    text-align: center;
+    font-size: 2.5em;
+  }
 }
 
 .section-benefits {
@@ -545,6 +593,7 @@ html {
 
   p {
     padding-top: 20px;
+    text-align: center;
   }
 
   img {
@@ -665,6 +714,13 @@ html {
     position: absolute;
     right: 0;
     top: -85px;
+
+    @include tablet {
+      display: none;
+    }
+    @include phone {
+      display: none;
+    }
   }
 
   .slick-initialized .slick-slide {
@@ -692,10 +748,7 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    @include tablet {
-      justify-content: space-evenly;
-    }
-    @include phone {
+    @media (max-width: 1100px) {
       justify-content: space-evenly;
     }
   }
@@ -757,8 +810,8 @@ html {
 
   &_left {
     width: 410px;
+    max-width: 100%;
     @include phone {
-      width: 100%;
       padding-bottom: 30px;
     }
 
@@ -837,6 +890,36 @@ html {
   position: relative;
   width: 100%;
   box-shadow: 0 0 49px 10px rgba(212, 209, 205, .3);
+
+  & .slider-nav {
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+
+    @include tablet {
+      display: none;
+    }
+    @include phone {
+      display: none;
+    }
+  }
+
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+
+  .slider-next,
+  .slider-prev {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    margin-left: 10px;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 .nopadding {
@@ -871,6 +954,7 @@ html {
     line-height: 1.7;
     @include phone {
       width: 100%;
+      padding-left: 0;
     }
 
     .first-line {
@@ -974,6 +1058,12 @@ html {
     top: 0;
     bottom: 0;
     margin: auto;
+
+    @include phone_xs {
+      width: 90vw;
+      margin: 0 auto;
+      padding: 15px;
+    }
 
     &:before {
       content: '';
@@ -1236,11 +1326,14 @@ html {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  z-index: 5;
+  z-index: 100;
   background-color: #fff;
   padding: 0;
   @include phone {
     height: 700px;
+  };
+  @include phone_xs {
+    height: 750px;
   };
 
   &_btn {

@@ -1,7 +1,13 @@
+$phone_xs-width: 400px;
 $phone-width: 768px;
 $desktop-width: 992px;
 
 @mixin phone {
+  @media (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+@mixin phone_xs {
   @media (max-width: #{$phone-width - 1px}) {
     @content;
   }

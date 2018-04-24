@@ -1,6 +1,6 @@
 $('.nav__header').click(function(e) {
   e.preventDefault();
-  $('.nav').toggleClass('show');
+  $('.header .nav').toggleClass('show');
 });
 
 $(document).ready(function() {
@@ -29,15 +29,19 @@ $(document).ready(function() {
 
   $(window).resize(function() {
     clearTimeout(window.resizedFinished);
+    var elHeight = $('.top-slider_wr').outerHeight();
     window.resizedFinished = setTimeout(function(){
       let screenWidth = window.innerWidth;
-      console.log(screenWidth);
+      //$('.bg-xs').css('height', '');
       if (screenWidth < 500) {
+        $('.bg-xs').css('height', elHeight);
         return
       };
       $('.js-slider-1').slick(slickOptions);
     }, 400);
   });
+});
+
 
   $('.js-slider-2').slick({
     dots: false,
@@ -47,6 +51,18 @@ $(document).ready(function() {
     prevArrow: $('.js-slider-2-prev'),
     nextArrow: $('.js-slider-2-next')
   });
+
+    let arr = {};
+    $('.js-filter input:checked').each(function() {
+      arr = $.extend(arr, $(this).data());
+    });
+
+    $('.js-slider-2').slick('slickUnfilter');
+    $('.js-slider-2').slick('slickFilter',
+      function(index) {
+        return $(this).attr("data-type") === arr.type && $(this).attr("data-slider") === arr.slider;
+      });
+
 
   $('.js-filter').on('change', function() {
     let arr = {};
@@ -60,40 +76,26 @@ $(document).ready(function() {
       function(index) {
         return $(this).attr("data-type") === arr.type && $(this).attr("data-slider") === arr.slider;
       });
-
   });
 
 
-    var owlOptions = {
-      items: 1,
-      margin: 5,
-      navText: ["", ""],
-      nav: true,
-      dots: false,
-      loop: true,
-      slideSpeed: 300,
-
-  };
-  // $('.js-slider-2').owlCarousel(owlOptions);
-  // $('.js-slider-3').owlCarousel(owlOptions);
-  // $('.js-slider-4').owlCarousel(owlOptions);
-  // $('.js-slider-5').owlCarousel(owlOptions);
-
-  $('.js-doc__slider').owlCarousel({
-    items: 1,
-    margin: 5,
-    navText: ["", ""],
-    nav: true,
-    dots: true,
-    loop: true,
-    onInitialized: findHeader,
-    onTranslated: findHeader
-  });
-
-  function findHeader(event) {
-    var imgHeader = $('.js-doc__slider').find('.owl-item.active').find('img').attr('alt');
+  $('.js-slider-3').on('init', function(event, slick, currentSlide, nextSlide){
+    let imgHeader = $('.js-slider-3').find('.slick-active').find('img').attr('alt');
     $('.slider_descr-text').html(imgHeader);
-  }
+});
+  $('.js-slider-3').slick({
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.js-slider-3-prev'),
+    nextArrow: $('.js-slider-3-next')
+  });
+
+  $('.js-slider-3').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    let imgHeader = $('.js-slider-3').find('.slick-active').find('img').attr('alt');
+    $('.slider_descr-text').html(imgHeader);
+});
 
   //   //choose color
 
@@ -213,7 +215,7 @@ $(document).ready(function() {
     }, 1500);
   });
 
-});
+
 
 //
 // // yandex map
