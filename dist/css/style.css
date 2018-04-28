@@ -772,7 +772,8 @@ html {
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    font-size: 0; }
   .top-slider .slick-dots {
     width: 100%;
     padding-left: 15px;
@@ -826,6 +827,10 @@ html {
       margin: auto;
       border-radius: 50%;
       border: 1px solid #8d8b8b; }
+
+@-moz-document url-prefix() {
+  .top-slider .slick-dots .slick-active button::after {
+    left: -1px; } }
 
 .owl {
   position: relative;
@@ -1021,7 +1026,9 @@ html {
   min-height: 245px;
   font-family: "FiraSans Bold";
   font-size: 1.38em;
-  color: #202020; }
+  color: #202020;
+  padding-top: 25px;
+  padding-bottom: 25px; }
   .benefits__item:not(:last-child) {
     border-right: 1px solid #d5d5d5; }
     @media (max-width: 767px) {

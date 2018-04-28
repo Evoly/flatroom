@@ -40,6 +40,8 @@ $(document).ready(function() {
       $('.js-slider-1').slick(slickOptions);
     }, 400);
   });
+
+  svg4everybody();
 });
 
 
@@ -102,7 +104,6 @@ $(document).ready(function() {
   $('.js-color-theme').click(function() {
     var set = ['orange', 'blue', 'red', 'violet', 'green', 'wine'];
     var color = $("input:radio:checked").attr('value');
-    $('.js-color').addClass(color);
     //chsnge css link
     var substr = '';
     var newLink = $('link[data-theme]').attr('href');
@@ -115,6 +116,19 @@ $(document).ready(function() {
     $('link[data-theme]').attr('href',
       function() { return this.href.replace(substr, color);}
     );
+  });
+    // data-type
+  $('input[name="companyType"]').click(function(e) {
+    var valueName = $("input[name='companyType']:radio:checked").data('type');
+    $('[data-type]').removeClass('hidden');
+
+    $('[data-type]').each(function() {
+      var el = $(this);
+      console.log(valueName);
+      if (el.data('type') !== valueName) {
+        $(this).addClass('hidden');
+      }
+    });
   });
 
   $('.color-theme_btn').click(function(e) {
