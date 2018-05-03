@@ -69,7 +69,7 @@ $(document).ready(function() {
     $('.js-filter input:checked').each(function() {
       arr = $.extend(arr, $(this).data());
     });
-    console.log(arr);
+    //console.log(arr);
       $('.js-slider-2').slick('slickUnfilter');
     $('.js-slider-2').slick('unslick');
     $('.js-slider-2').slick(slickOptions_2);
@@ -78,7 +78,6 @@ $(document).ready(function() {
         return $(this).attr("data-type") === arr.type && $(this).attr("data-slider") === arr.slider;
       });
   });
-
 
   $('.js-slider-3').on('init', function(event, slick, currentSlide, nextSlide){
     let imgHeader = $('.js-slider-3').find('.slick-active').find('img').attr('alt');

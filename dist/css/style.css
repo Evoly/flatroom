@@ -789,7 +789,8 @@ html {
       background-color: transparent;
       border: none;
       cursor: pointer;
-      position: relative; }
+      position: relative;
+      margin-right: 3px; }
     .top-slider .slick-dots li button {
       font-size: 0;
       line-height: 0;
