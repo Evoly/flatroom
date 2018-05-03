@@ -21,9 +21,8 @@
 .slider-next {
   background-image: linear-gradient(116deg, #355071 0%, #2b5b9b 100%); }
 
-.slider-prev:before {
-  background: url("../resources/images/sprite-blue.png") no-repeat;
-  background-position: -120px -83px; }
+.slider-prev .arrow {
+  fill: #2b5b9b; }
 
 .top-slider .slick-dots li.slick-active button::before {
   background-color: #247dec; }

@@ -9,6 +9,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
 const newer = require('gulp-newer');
 const browserSync = require('browser-sync');
+const svgSprite = require("gulp-svg-sprites");
 //const spritesmith = require('gulp.spritesmith');
 //const rename = require("gulp-rename");
 //const merge = require('merge-stream');
@@ -21,6 +22,20 @@ gulp.task('sass', function(){
         .pipe(autoprefixer({ browsers: ['last 2 versions', 'ie 10'] }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest("dist/css"))
+});
+
+
+
+gulp.task('sprites', function () {
+    return gulp.src('src/resources/images/svg/*.svg')
+        .pipe(svgSprite({
+          mode: "defs",
+          preview: false,
+          svg: {
+                sprite: "sprite.svg"
+            }
+        }))
+        .pipe(gulp.dest("dist/resources/images"));
 });
 
 // gulp.task('sprites', function () {

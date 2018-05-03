@@ -22,9 +22,8 @@ $orange:  #f7a32c;
 .slider-next {
   background-image: linear-gradient(116deg, rgb(135,115,87) 0%, rgb(205,177,137) 100%);
 }
-.slider-prev:before {
-  background: url("../resources/images/sprite-orange.png") no-repeat;
-  background-position: -433px -228px;
+.slider-prev .arrow {
+  fill: $orange;
 }
 .top-slider .slick-dots li.slick-active button::before{
   background-color: $orange;

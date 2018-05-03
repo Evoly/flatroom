@@ -18,8 +18,8 @@
 .slider-next {
   background-image: linear-gradient(-120deg, #df3a00 0%, #9d2900 100%); }
 
-.slider-prev:before {
-  background: url("../resources/images/icons/left-arrow-red.png") no-repeat; }
+.slider-prev .arrow {
+  fill: #df3a00; }
 
 .top-slider .slick-dots li.slick-active button::before {
   background-color: #df3a00; }

@@ -19,9 +19,8 @@
 .slider-next {
   background-image: linear-gradient(116deg, #877357 0%, #cdb189 100%); }
 
-.slider-prev:before {
-  background: url("../resources/images/sprite-orange.png") no-repeat;
-  background-position: -433px -228px; }
+.slider-prev .arrow {
+  fill: #f7a32c; }
 
 .top-slider .slick-dots li.slick-active button::before {
   background-color: #f7a32c; }

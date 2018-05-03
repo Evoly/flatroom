@@ -22,9 +22,8 @@ $blue:  #247dec;
 .slider-next {
   background-image: linear-gradient(116deg, rgb(53,80,113) 0%, rgb(43,91,155) 100%);
 }
-.slider-prev:before {
-  background: url("../resources/images/sprite-blue.png") no-repeat;
-  background-position: -120px -83px;
+.slider-prev .arrow {
+  fill: #2b5b9b;
 }
 .top-slider .slick-dots li.slick-active button::before{
   background-color: $blue;

@@ -308,16 +308,16 @@ html {
     width: 20px;
     height: 25px;
     cursor: pointer;
+    background-image: none;
   }
 
-  .slider-next {
-    background: url("../resources/images/icons/slider-next.png") no-repeat;
-    right: 0;
-  }
-
-  .slider-prev {
-    background: url("../resources/images/icons/slider-rev.png") no-repeat;
-    left: 0;
+  .slider-next,
+  .slider-prev  {
+    .arrow {
+      width: 20px;
+      height: 25px;
+      fill: #fff;
+    }
   }
 
   ul.slick-dots {
@@ -386,105 +386,6 @@ html {
     }
   }
 }
-@-moz-document url-prefix() {
-  .top-slider .slick-dots .slick-active button::after{
-     left : -1px;
-  }
-}
-// TODO: owl
-
-.owl {
-  position: relative;
-  width: 150px;
-  height: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  @include tablet {
-    display: none;
-  }
-  @include phone {
-    display: none;
-  }
-
-  &_nav {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  &_dots {
-    display: none;
-    position: absolute;
-    width: 100px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    cursor: pointer;
-    outline: none;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .owl-next,
-  .owl-prev {
-    width: 15px;
-    height: 25px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    border: none;
-    margin: auto;
-    cursor: pointer;
-    outline: none;
-  }
-
-  .owl-next {
-    background: url("../resources/images/icons/slider-next.png") no-repeat;
-    right: 0;
-  }
-
-  .owl-prev {
-    background: url("../resources/images/icons/slider-rev.png") no-repeat;
-    left: 0;
-  }
-
-  .owl-dot {
-    width: 22px;
-    height: 11px;
-    background-color: transparent;
-    border: none;
-    padding-left: 5px;
-    padding-right: 5px;
-    cursor: pointer;
-    outline: none;
-
-    &.active {
-      & span:after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        top: -4px;
-        left: -4px;
-        border-radius: 50%;
-      }
-    }
-  }
-
-  .owl-dot span {
-    width: 9px;
-    height: 9px;
-    background-color: rgba(141, 139, 139, 1);
-    border-radius: 50%;
-    display: block;
-    position: relative;
-  }
-}
-
 .btn {
   position: relative;
   display: flex;
@@ -542,15 +443,6 @@ html {
     }
   }
 }
-
-.owl-carousel .owl-nav button {
-  transition: all 0.4s ease-in-out;
-
-  &:hover {
-    opacity: 0.7;
-  }
-}
-
 .section-header {
   font-family: "FiraSans SemiBold";
   font-size: 3.25em;
@@ -737,7 +629,9 @@ html {
 
   .slider-next,
   .slider-prev {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     background-color: transparent;
@@ -822,47 +716,12 @@ html {
     @include phone {
       padding-bottom: 30px;
     }
-
-    .owl-nav {
-      position: absolute;
-      right: 0;
-      bottom: -60px;
-    }
-
-    .owl-carousel .owl-nav button.owl-next,
-    .owl-carousel .owl-nav button.owl-prev {
-      position: relative;
-      width: 50px;
-      height: 50px;
-      background-color: transparent;
-      border: 1px solid transparent;
-      border-radius: 100%;
-      margin-left: 10px;
-      outline: none;
-    }
   }
 }
 /*slider*/
 .section-doc .slider-next,
-.section-doc .slider-prev,
-.services .slider-next,
-.services .slider-prev {
-  &:before {
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    content: '';
-    width: 19px;
-    height: 14px;
-  }
-}
-
-.section-doc .slider-next:before,
-.services .slider-next:before {
-  background: url("../resources/images/icons/right-arrow.png") no-repeat;
+.services .slider-next {
+  fill: #fff;
 }
 
 .odered__list {
@@ -918,7 +777,9 @@ html {
 
   .slider-next,
   .slider-prev {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     background-color: transparent;
@@ -1046,10 +907,6 @@ html {
     height: 50%;
     border-bottom: 1px solid #000;
   }
-}
-
-.owl-nav {
-  position: absolute;
 }
 
 .form {
@@ -1506,13 +1363,6 @@ html {
   overflow-y: hidden;
   z-index: 5;
 }
-
-.owl-carousel.owl-loaded {
-  &.hidden {
-    display: none;
-  }
-}
-
 div[data-type-company='sale'] {
   & .services_slider-header {
     text-transform: uppercase;
@@ -1522,4 +1372,8 @@ div[data-type-company='sale'] {
 .icon_svg {
   width: 85px;
   height: 85px;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
 }

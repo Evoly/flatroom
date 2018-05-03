@@ -18,10 +18,10 @@
 .slider-next {
   background-image: linear-gradient(116deg, #11570b 0%, #16780e 100%); }
 
-.slider-prev:before {
-  background: url("../resources/images/sprite-green.png") no-repeat;
-  background-position: -120px -83px; }
+.slider-prev .arrow {
+  fill: #25a00d; }
 
+.t
 .top-slider .slick-dots li.slick-active button::before {
   background-color: #25a00d; }
 

@@ -5,7 +5,7 @@ $('.nav__header').click(function(e) {
 
 $(document).ready(function() {
 
-  let slickOptions = {
+  var slickOptions = {
     dots: true,
     infinite: true,
     slidesToShow: 1,
@@ -42,24 +42,21 @@ $(document).ready(function() {
   });
 
   svg4everybody();
-});
-
-
-  $('.js-slider-2').slick({
+  var slickOptions_2 = {
     dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: $('.js-slider-2-prev'),
     nextArrow: $('.js-slider-2-next')
-  });
+  }
+  $('.js-slider-2').slick(slickOptions_2);
 
     let arr = {};
     $('.js-filter input:checked').each(function() {
       arr = $.extend(arr, $(this).data());
     });
 
-    $('.js-slider-2').slick('slickUnfilter');
     $('.js-slider-2').slick('slickFilter',
       function(index) {
         return $(this).attr("data-type") === arr.type && $(this).attr("data-slider") === arr.slider;
@@ -72,8 +69,10 @@ $(document).ready(function() {
     $('.js-filter input:checked').each(function() {
       arr = $.extend(arr, $(this).data());
     });
-
-    $('.js-slider-2').slick('slickUnfilter');
+    console.log(arr);
+      $('.js-slider-2').slick('slickUnfilter');
+    $('.js-slider-2').slick('unslick');
+    $('.js-slider-2').slick(slickOptions_2);
     $('.js-slider-2').slick('slickFilter',
       function(index) {
         return $(this).attr("data-type") === arr.type && $(this).attr("data-slider") === arr.slider;
@@ -104,7 +103,7 @@ $(document).ready(function() {
   $('.js-color-theme').click(function() {
     var set = ['orange', 'blue', 'red', 'violet', 'green', 'wine'];
     var color = $("input:radio:checked").attr('value');
-    //chsnge css link
+    //change css link
     var substr = '';
     var newLink = $('link[data-theme]').attr('href');
     for (var i = 0; i < set.length; i++){
@@ -228,8 +227,7 @@ $(document).ready(function() {
       scrollTop: top
     }, 1500);
   });
-
-
+});
 
 //
 // // yandex map

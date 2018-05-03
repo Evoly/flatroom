@@ -22,9 +22,8 @@ $violet: #770f6e;
 .slider-next {
   background-image: linear-gradient(-120deg, rgb(141,14,114) 0%, rgb(94,17,105) 100%);
 }
-.slider-prev:before {
-  background: url("../resources/images/sprite-violet.png")no-repeat;
-  background-position: -120px -83px;
+.slider-prev .arrow {
+  fill: $violet;
 }
 .top-slider .slick-dots li.slick-active button::before{
   background-color: $violet;

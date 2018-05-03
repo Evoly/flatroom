@@ -18,8 +18,8 @@
 .slider-next {
   background-image: linear-gradient(-120deg, #ba3660 0%, #7b223f 100%); }
 
-.slider-prev:before {
-  background: url("../resources/images/icons/left-arrow-wine.png") no-repeat; }
+.slider-prev .arrow {
+  fill: #ba3660; }
 
 .top-slider .slick-dots li.slick-active button::before {
   background-color: #ba3660; }
