@@ -1,6 +1,7 @@
 $('.nav__header').click(function(e) {
   e.preventDefault();
   $('.header .nav').toggleClass('show');
+  $('.navbar-toggle').toggleClass('show');
 });
 
 $(document).ready(function() {

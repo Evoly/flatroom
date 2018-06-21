@@ -40,14 +40,17 @@ html {
   width: 100%;
   color: #fff;
 }
+
 .header {
   @include phone {
-    background-image: linear-gradient(45deg, #869791 0%, #d5d5d5 99%, #d6d6d6 100%);
+    background-color: #b9b8ba;
+    height: 100vh;
   };
   @include tablet {
-    background-image: linear-gradient(45deg, #869791 0%, #d5d5d5 99%, #d6d6d6 100%);
+    background-color: #b9b8ba;
   };
 }
+
 .nav {
   flex-direction: row;
   flex-wrap: nowrap;
@@ -94,9 +97,9 @@ html {
     top: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background-image: linear-gradient(45deg, #869791 0%, #d5d5d5 99%, #d6d6d6 100%);
-    min-height: 200px;
+    justify-content: space-between;
+    background-color: #8c8c8c;
+    min-height: 250px;
     width: 100%;
     left: 0;
     padding-top: 20px;
@@ -109,7 +112,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-image: linear-gradient(45deg, #869791 0%, #d5d5d5 99%, #d6d6d6 100%);
+    background-color: #9e9da3;
     min-height: 200px;
     width: 100%;
     left: 0;
@@ -121,17 +124,16 @@ html {
 .navbar-toggle {
   position: relative;
   background-color: transparent;
-  width: 25px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
     transition: all 0.4s ease-in-out;
-
   }
 
-  span {
+  .icon-bar {
     display: block;
     position: absolute;
     height: 2px;
@@ -152,12 +154,27 @@ html {
       top: 20px;
     }
   }
+
+  &.show .icon-bar {
+    &:nth-child(1) {
+      transform: rotate(-45deg) translate(-7px, 8px);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(45deg) translate(-6px, -7px);
+    }
+  }
 }
 
 .logo {
   font-size: 2em;
   font-family: "Bebas Neue";
 }
+
 .header .logo {
   @include phone_xs {
     width: 100%;
@@ -207,10 +224,9 @@ html {
       height: 70px;
     }
     @include phone_xs {
-      top:15px;
+      top: 15px;
       flex-flow: row wrap;
     }
-
   }
 
   &__content {
@@ -229,13 +245,14 @@ html {
       transform: none;
     }
     @include phone {
-      position: static;
-      transform: none;
-      width: 100%;
-      padding-top: 80px;
-      padding-bottom: 30px;
-      transform: none;
-      padding-left: 20px;
+      //position: static;
+      //transform: none;
+      width: auto;
+      top: 50%;
+      left: 50%;
+      // padding-bottom: 30px;
+      // transform: none;
+      // padding-left: 20px;
     }
   }
 
@@ -274,6 +291,9 @@ html {
 
 .top-slider {
   position: relative;
+  @include phone {
+    height: 100%;
+  }
 
   & .container {
     position: static;
@@ -312,7 +332,7 @@ html {
   }
 
   .slider-next,
-  .slider-prev  {
+  .slider-prev {
     .arrow {
       width: 20px;
       height: 25px;
@@ -387,6 +407,7 @@ html {
     }
   }
 }
+
 .btn {
   position: relative;
   display: flex;
@@ -419,7 +440,6 @@ html {
   &_submit {
     width: 300px;
     box-shadow: 0 0 49px 10px rgba(36, 125, 236, .27);
-
     @include phone_xs {
       width: 100%;
       margin: 0 auto;
@@ -444,6 +464,7 @@ html {
     }
   }
 }
+
 .section-header {
   font-family: "FiraSans SemiBold";
   font-size: 3.25em;
@@ -473,6 +494,7 @@ html {
   }
 }
 // TODO: padding ie
+
 .benefits__item {
   flex: 1 0;
   flex-direction: column;
@@ -615,7 +637,6 @@ html {
     position: absolute;
     right: 0;
     top: -85px;
-
     @include tablet {
       display: none;
     }
@@ -720,6 +741,7 @@ html {
   }
 }
 /*slider*/
+
 .section-doc .slider-next,
 .services .slider-next {
   fill: #fff;
@@ -763,7 +785,6 @@ html {
     position: absolute;
     right: 0;
     bottom: -60px;
-
     @include tablet {
       display: none;
     }
@@ -924,7 +945,6 @@ html {
     top: 0;
     bottom: 0;
     margin: auto;
-
     @include phone_xs {
       width: 90vw;
       margin: 0 auto;
@@ -1364,6 +1384,7 @@ html {
   overflow-y: hidden;
   z-index: 5;
 }
+
 div[data-type-company='sale'] {
   & .services_slider-header {
     text-transform: uppercase;
@@ -1374,6 +1395,7 @@ div[data-type-company='sale'] {
   width: 85px;
   height: 85px;
 }
+
 .arrow {
   width: 40px;
   height: 40px;
